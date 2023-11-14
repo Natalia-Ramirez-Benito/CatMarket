@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ThemeOverlay.CatMarket.MySplash" parent="Theme.SplashScreen"></style>
+    <item name="windowSplashScreenBackground" type="color">#FFFFFF</item>
+    <item name="windowSplashScreenAnimatedIcon" type="drawable">@drawable/cat</item>
+    <item name="postSplashScreenTheme" type="style">@style/Theme.CatMarket</item>
+
+</resources>
