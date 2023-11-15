@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                     binding.ed3.text.clear()
                 }
             }else{
-                Toast.makeText(this,"All fields required", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Faltan datos por rellenar", Toast.LENGTH_SHORT).show()
             }
         }
         binding.loginLink.setOnClickListener {

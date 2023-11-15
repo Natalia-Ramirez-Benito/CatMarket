@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/home"
-        android:title="Home"
+        android:id="@+id/bottom_home"
+        android:title="Menú"
         android:icon="@drawable/baseline_home_24"/>
 
     <item
-        android:id="@+id/fab"
-        android:title=""
-        android:enabled="false"/>
+        android:id="@+id/bottom_report"
+        android:title="Reportar"
+        android:icon="@drawable/baseline_report_24"/>
 
     <item
-        android:id="@+id/profile"
+        android:id="@+id/bottom_profile"
         android:title="Perfil"
         android:icon="@drawable/baseline_person_4_24"/>
 
