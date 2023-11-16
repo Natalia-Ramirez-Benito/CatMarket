@@ -1,5 +1,6 @@
 package com.ejercicio.catmarket
 
+import ReportFragment
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -14,6 +15,8 @@ class welcome_window : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bind= ActivityWelcomeWindowBinding.inflate(layoutInflater)
         setContentView(bind.root)
+
+        val username = intent.getStringExtra("name") ?: ""
 
         bottomNavigationView = bind.bottomNavigation
         replaceFragment(HomeFragment())
@@ -35,15 +38,21 @@ class welcome_window : AppCompatActivity() {
             }
         }
 
-        //var value=intent.getStringExtra("name")
-        //bind.uname.text=value
-        //bind.logout.setOnClickListener {
-        //    startActivity(Intent(this,login_form::class.java))
-        //}
     }
 
-    private fun replaceFragment(fragment: Fragment){
-        supportFragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit()
+    private fun replaceFragment(fragment: Fragment) {
+        // Obtener el nombre de usuario del Intent
+        val username = intent.getStringExtra("name") ?: ""
+
+        // Pasar el nombre de usuario al fragmento utilizando el método newInstance
+        val newFragment = when (fragment) {
+            is HomeFragment -> HomeFragment.newInstance(username)
+            is ReportFragment -> ReportFragment.newInstance(username)
+            is ProfileFragment -> ProfileFragment.newInstance(username)
+            else -> fragment
+        }
+
+        supportFragmentManager.beginTransaction().replace(R.id.frame_container, newFragment).commit()
     }
 
 }

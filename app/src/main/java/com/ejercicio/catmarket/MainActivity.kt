@@ -2,10 +2,10 @@ package com.ejercicio.catmarket
 
 import android.content.ContentValues
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.ejercicio.catmarket.databinding.ActivityMainBinding
 
@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         installSplashScreen()
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         var dbhelp=DBClass(applicationContext)
         var db=dbhelp.writableDatabase

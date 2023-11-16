@@ -1,16 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- res/layout/fragment_profile.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Perfil"
-        android:textAlignment="center"
-        android:textSize="34sp" />
 
-</FrameLayout>
+    <!-- Título de los reportes -->
+
+    <!-- RecyclerView para mostrar los reportes -->
+
+    <!-- Botón de cierre de sesión -->
+    <TextView
+        android:id="@+id/reportTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Todos sus reportes"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/UserTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="User"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/reportTitleTextView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reportRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="428dp"
+        android:layout_below="@id/UserTextView"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reportRecyclerView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/lavender"
+        android:text="Cerrar Sesión" />
+
+</RelativeLayout>

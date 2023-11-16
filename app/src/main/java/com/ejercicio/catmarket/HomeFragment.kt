@@ -14,6 +14,17 @@ class HomeFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var postAdapter: PostAdapter
 
+    companion object {
+        // Agregar un método estático para crear una nueva instancia del fragmento
+        fun newInstance(username: String): HomeFragment {
+            val fragment = HomeFragment()
+            val args = Bundle()
+            args.putString("username", username)
+            fragment.arguments = args
+            return fragment
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
