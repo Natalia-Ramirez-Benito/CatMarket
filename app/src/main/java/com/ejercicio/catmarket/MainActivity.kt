@@ -18,9 +18,9 @@ class MainActivity : AppCompatActivity() {
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         var dbhelp=DBClass(applicationContext)
         var db=dbhelp.writableDatabase
+
         binding.btnrgs.setOnClickListener {
             var name=binding.ed1.text.toString()
             var username=binding.ed2.text.toString()

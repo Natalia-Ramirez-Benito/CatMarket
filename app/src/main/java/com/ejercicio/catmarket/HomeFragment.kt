@@ -41,12 +41,17 @@ class HomeFragment : Fragment() {
 
     private fun createDummyPosts(): List<Post> {
         val posts = mutableListOf<Post>()
-        posts.add(Post("Post 1", "This is the content of post 1", R.drawable.post1))
-        posts.add(Post("Post 2", "This is the content of post 2", R.drawable.post2))
-        posts.add(Post("Post 3", "This is the content of post 3", R.drawable.post3))
-        posts.add(Post("Post 4", "This is the content of post 4", R.drawable.post4))
-        posts.add(Post("Post 5", "This is the content of post 5", R.drawable.post5))
-        posts.add(Post("Post 6", "This is the content of post 6", R.drawable.post6))
+        posts.add(Post("Dato 1", "Se comunican mediante vocalizaciones como maullidos, " +
+                "aullidos, ronroneos y gemidos, además de ciertas poses y movimientos.", R.drawable.post1))
+        posts.add(Post("Dato 2", "Su esperanza de vida va de entre 12 y 14 años.", R.drawable.post2))
+        posts.add(Post("Dato 3", "Además de saltar hasta 3.5 metros, se valen de sus " +
+                "uñas para escalar muros, árboles o superficies blandas.", R.drawable.post3))
+        posts.add(Post("Dato 4", "Si su pelaje es de tres o hasta cuatro colores, " +
+                "se trata de una hembra.", R.drawable.post4))
+        posts.add(Post("Dato 5", "Cada una de sus orejas tiene " +
+                "32 músculos y movimientos independientes.", R.drawable.post5))
+        posts.add(Post("Dato 6", "Duermen entre 13 y 14 " +
+                "horas al día (quién como ellos).", R.drawable.post6))
         return posts
     }
 }
